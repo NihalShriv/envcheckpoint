@@ -1,4 +1,5 @@
 # envcheckpoint: exact low-memory environments for DMRG / TDVP
+n[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23725023.svg)](https://doi.org/10.5281/zenodo.23725023)
 
 Finite-MPS sweep algorithms (DMRG, TDVP) keep one left and one right environment tensor per site. These dominate
 memory at large bond dimension. **envcheckpoint** keeps only every *k*-th environment (k ≈ √N) plus the segment in
@@ -34,7 +35,7 @@ Energies identical to the standard environments (difference 0.0) in every test: 
   `chunks` (chunked H_eff application for dense tensors).
 
 ## Citation
-If you use this, please cite the paper (arXiv link to be added) and this repository (Zenodo DOI to be added).
+If you use this, please cite the paper (arXiv link to be added) and this repository: [doi:10.5281/zenodo.23725023](https://doi.org/10.5281/zenodo.23725023).
 
 ## License
 MIT
