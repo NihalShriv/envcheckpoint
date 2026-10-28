@@ -4,8 +4,8 @@
 
 Finite-MPS sweep algorithms (DMRG, TDVP) keep one left and one right environment tensor per site. These dominate
 memory at large bond dimension. **envcheckpoint** keeps only every *k*-th environment (k ≈ √N) plus the segment in
-use, and recomputes the others from the nearest stored one when the sweep reaches them — the same contractions, so
-**results are unchanged** — for about one extra environment update per site and sweep.
+use, and recomputes the others from the nearest stored one when the sweep reaches them. It uses the same contractions, so
+**results are unchanged**, at the cost of about one extra environment update per site and sweep.
 
 Drop-in implementations (ITensorMPS.jl and TeNPy benchmarked; MPSKit.jl and quimb exactness-tested, experimental):
 
