@@ -7,7 +7,7 @@ memory at large bond dimension. **envcheckpoint** keeps only every *k*-th enviro
 use, and recomputes the others from the nearest stored one when the sweep reaches them. It uses the same contractions, so
 **results are unchanged**, at the cost of about one extra environment update per site and sweep.
 
-Drop-in implementations (ITensorMPS.jl and TeNPy benchmarked; MPSKit.jl and quimb exactness-tested, experimental):
+Drop-in implementations (ITensorMPS.jl, TeNPy and MPSKit.jl benchmarked; quimb exactness-tested, experimental):
 
 | library | file | usage |
 |---|---|---|
@@ -28,7 +28,15 @@ Energies identical to the standard environments (difference 0.0) in every test: 
 - Overhead ~6 % with standard eigensolvers (median of 10 repeats; ~15 % with a 2-iteration Davidson); faster than file-based offload (RAM disk, local disk, parallel filesystem).
 - GPU, own CUDA code: bond dimension on one H200 1664 → 3712 (triangular J1-J2 XC6), 2176 → ≥4096 (square YC8); on an 80 GB H100 1280 → 2816 and 1664 → ≥3328.
 - ITensorMPS.jl, U(1), H100 80 GB: maxdim 3584 → 4608 at equal sweep time.
+- Smaller GPUs (H200 capped to 24 / 40 GB usable): bond dimension 640 → 1408 and 768 → 1920 (2.2x, 2.5x), at about 2x the time per sweep.
 - TeNPy (CPU): peak RAM 2.9-4.3x lower with no slowdown; with TeNPy's disk cache, 3.7x less disk.
+- ITensorMPS.jl real-time TDVP (CPU, YC6 12x6, D=768): peak RAM 6.38 → 4.82 GB, and faster per step in our runs.
+- MPSKit.jl (CPU, spin-1 YC6 24x6, D ≤ 768): 1.22x faster, peak RAM 9.35 → 7.63 GB.
+- Wide ab initio MPOs (H16, W=578): little gain; environments are a small share of memory there.
+
+## Upstream
+- TeNPy: [tenpy/tenpy#713](https://github.com/tenpy/tenpy/pull/713) (option `env_checkpoint_every`)
+- ITensorMPS.jl: [ITensor/ITensorMPS.jl#228](https://github.com/ITensor/ITensorMPS.jl/pull/228) (`CheckpointedProjMPO`)
 
 ## Options
 - `k`: checkpoint spacing (default round(√N)).
