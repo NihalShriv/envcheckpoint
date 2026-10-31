@@ -1,0 +1,7 @@
+initial state loaded from $HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt (right-canonicalised)
+tric Lx=24 Ly=6 N=144 W=38 (raw 53) bonds=828 heff=cutensor sweeps=1 D_max=3072 fresh start gpu_mem_total_gb=150.11
+MEMPROF sweep=1 peak_gb=75.7122 mps_gb=14.1698 env_gb=18.8073 other_gb=42.7352
+sweep 1/1 D=3072 chi=3072 E=-73.1785705137 disc=3.56335302376e-07 t=316.812564924s heff_frac=0 mem=75.712233472GB davidson: 286/286 above tol 1e-12, max_resid=0.0148500332982
+final: davidson_E=-73.17857051371 <psi|H|psi>/<psi|psi>=-73.178570513714 norm=0.99999999999999
+total_run_s=390.252715752
+warm_hits=42 warm_fallbacks=244

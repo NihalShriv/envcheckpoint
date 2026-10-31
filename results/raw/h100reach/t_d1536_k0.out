@@ -1,0 +1,4 @@
+initial state loaded from $HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt (right-canonicalised)
+tric Lx=24 Ly=6 N=144 W=38 (raw 53) bonds=828 heff=cutensor sweeps=2 D_max=1536 fresh start gpu_mem_total_gb=85.0175
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  cuTENSOR error at src/ct_contract.cu:72 for cutensorContract(handle(), it->second.plan, &one, A, B, &zero, D, D, workspace(it->second.ws), it->second.ws, 0): CUTENSOR_STATUS_INVALID_VALUE

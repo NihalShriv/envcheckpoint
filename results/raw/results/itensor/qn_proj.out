@@ -1,0 +1,20 @@
+proj qn=1 D=512 sweep 1 E=-62.230180391642 t=128.4s used=3.0GB
+proj qn=1 D=512 sweep 2 E=-63.304612618680 t=98.5s used=9.8GB
+proj qn=1 D=1024 sweep 1 E=-63.392772016016 t=205.1s used=34.7GB
+proj qn=1 D=1024 sweep 2 E=-63.396038484949 t=238.3s used=50.5GB
+proj qn=1 D=1536 sweep 1 E=-63.413490803726 t=305.8s used=75.4GB
+proj qn=1 D=1536 sweep 2 E=-63.414127818041 t=325.7s used=64.9GB
+proj qn=1 D=2048 sweep 1 E=-63.421706131272 t=410.0s used=76.5GB
+proj qn=1 D=2048 sweep 2 E=-63.421949226872 t=452.8s used=74.5GB
+proj qn=1 D=2560 sweep 1 E=-63.425990941862 t=426.1s used=66.5GB
+proj qn=1 D=2560 sweep 2 E=-63.426094409914 t=477.1s used=60.3GB
+proj qn=1 D=3072 sweep 1 E=-63.428502794086 t=570.1s used=79.7GB
+proj qn=1 D=3072 sweep 2 E=-63.428572598305 t=629.3s used=75.4GB
+proj qn=1 D=3584 sweep 1 E=-63.430123777416 t=784.2s used=76.7GB
+proj qn=1 D=3584 sweep 2 E=-63.430153095693 t=851.8s used=81.0GB
+┌ Warning: Assignment to `sites` in soft scope is ambiguous because a global variable by the same name exists: `sites` will be treated as a new local. Disambiguate by using `local sites` to suppress this warning or `global sites` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:36
+┌ Warning: Assignment to `H` in soft scope is ambiguous because a global variable by the same name exists: `H` will be treated as a new local. Disambiguate by using `local H` to suppress this warning or `global H` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:37
+┌ Warning: Assignment to `psi` in soft scope is ambiguous because a global variable by the same name exists: `psi` will be treated as a new local. Disambiguate by using `local psi` to suppress this warning or `global psi` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:44

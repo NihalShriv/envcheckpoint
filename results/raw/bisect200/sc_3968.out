@@ -1,0 +1,18 @@
+cyl Lx=16 Ly=8 N=128 W=26 (raw 47) bonds=488 heff=cutensor sweeps=7 D_max=3968 fresh start gpu_mem_total_gb=150.11
+MEMPROF sweep=1 peak_gb=20.7417 mps_gb=0.118839 env_gb=0.117965 other_gb=20.5049
+sweep 1/7 D=256 chi=256 E=-23.3625623391 disc=0.00080212601211 t=2.835227152s heff_frac=0 mem=20.741685248GB davidson: 239/254 above tol 1e-12, max_resid=27.4217089476
+MEMPROF sweep=2 peak_gb=20.7438 mps_gb=0.118839 env_gb=0.117965 other_gb=20.507
+sweep 2/7 D=256 chi=256 E=-55.1359894671 disc=0.000941547922472 t=2.790624419s heff_frac=0 mem=20.7437824GB davidson: 254/254 above tol 1e-12, max_resid=2.69892294847
+MEMPROF sweep=3 peak_gb=24.1663 mps_gb=1.78398 env_gb=0.327811 other_gb=22.0545
+sweep 3/7 D=1024 chi=1024 E=-60.8063036879 disc=4.66293670343e-15 t=10.665428004s heff_frac=0 mem=24.166334464GB davidson: 254/254 above tol 1e-12, max_resid=1.4405423779
+MEMPROF sweep=4 peak_gb=26.2928 mps_gb=1.83431 env_gb=1.88744 other_gb=22.5711
+sweep 4/7 D=1024 chi=1024 E=-63.0784606301 disc=1.06103965027e-05 t=20.498367439s heff_frac=0 mem=26.292846592GB davidson: 254/254 above tol 1e-12, max_resid=1.0574640446
+MEMPROF sweep=5 peak_gb=43.802 mps_gb=7.20302 env_gb=7.54975 other_gb=29.0492
+sweep 5/7 D=2048 chi=2048 E=-63.3932031792 disc=3.12637249733e-06 t=95.752036956s heff_frac=0 mem=43.80196864GB davidson: 254/254 above tol 1e-12, max_resid=0.280847606252
+MEMPROF sweep=6 peak_gb=117.378 mps_gb=26.5492 env_gb=28.341 other_gb=62.4882
+sweep 6/7 D=3968 chi=3968 E=-63.429088658 disc=1.47344890478e-06 t=564.109405025s heff_frac=0 mem=117.378449408GB davidson: 254/254 above tol 1e-12, max_resid=0.089773610388
+MEMPROF sweep=7 peak_gb=117.376 mps_gb=26.5492 env_gb=28.341 other_gb=62.4861
+sweep 7/7 D=3968 chi=3968 E=-63.4307796206 disc=2.37074961085e-06 t=745.587153971s heff_frac=0 mem=117.376352256GB davidson: 254/254 above tol 1e-12, max_resid=0.0233568766899
+final: davidson_E=-63.430779620637 <psi|H|psi>/<psi|psi>=-63.430779620647 norm=0.99999999999998
+total_run_s=1565.114398467
+warm_hits=1346 warm_fallbacks=432

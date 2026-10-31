@@ -1,0 +1,6 @@
+initial state loaded from $HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt (right-canonicalised)
+tric Lx=24 Ly=6 N=144 W=38 (raw 53) bonds=828 heff=cutensor sweeps=2 D_max=2048 fresh start gpu_mem_total_gb=150.11
+sweep 1/2 D=2048 chi=2048 E=-73.1764713332 disc=3.17696319407e-06 t=178.296618441s heff_frac=0 mem=62.594547712GB davidson: 286/286 above tol 1e-12, max_resid=0.00770119357663
+sweep 2/2 D=2048 chi=2048 E=-73.1767484438 disc=3.88886957825e-06 t=226.966844617s heff_frac=0 mem=62.594547712GB davidson: 286/286 above tol 1e-12, max_resid=0.0057522969512
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  cuTENSOR error at src/ct_contract.cu:72 for cutensorContract(handle(), it->second.plan, &one, A, B, &zero, D, D, workspace(it->second.ws), it->second.ws, 0): CUTENSOR_STATUS_INVALID_VALUE

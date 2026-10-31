@@ -1,0 +1,17 @@
+# basis=cc-pvtz ncas=58 nel=10 mpo_s=11.2
+
+Sweep =    0 | Direction =  forward | Bond dimension =  500 | Noise =  0.00e+00 | Dav threshold =  1.00e-10
+Time elapsed =    249.648 | E =    -109.1897555310 | DW = 1.53064e-19
+
+Sweep =    1 | Direction = backward | Bond dimension =  500 | Noise =  0.00e+00 | Dav threshold =  1.00e-10
+Time elapsed =    285.286 | E =    -109.3377645126 | DE = -1.48e-01 | DW = 1.57252e-06
+
+{"mode": "mem", "basis": "cc-pvtz", "ncas": 58, "D": 500, "E": -109.33776451260945, "s_per_2sweeps": 541.7149577140808, "peak_scratch_gb": 0.011228943, "maxrss_gb": 5.0003, "tread": 0.24688482284545898, "twrite": 3.284053325653076}
+
+Sweep =    0 | Direction =  forward | Bond dimension = 1000 | Noise =  0.00e+00 | Dav threshold =  1.00e-10
+Time elapsed =     90.649 | E =    -109.3668311099 | DW = 1.62129e-07
+
+Sweep =    1 | Direction = backward | Bond dimension = 1000 | Noise =  0.00e+00 | Dav threshold =  1.00e-10
+Time elapsed =    213.617 | E =    -109.3716900862 | DE = -4.86e-03 | DW = 3.78922e-06
+
+{"mode": "mem", "basis": "cc-pvtz", "ncas": 58, "D": 1000, "E": -109.37169008623916, "s_per_2sweeps": 231.82824277877808, "peak_scratch_gb": 0.026981859, "maxrss_gb": 13.719768, "tread": 3.492795944213867, "twrite": 17.362549304962158}

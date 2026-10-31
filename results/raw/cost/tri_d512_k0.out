@@ -1,0 +1,4 @@
+initial state loaded from $HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt (right-canonicalised)
+tric Lx=24 Ly=6 N=144 W=38 (raw 53) bonds=828 heff=cutensor sweeps=2 D_max=512 fresh start gpu_mem_total_gb=150.11
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  CUDA error at own_experimental/src/two_site_split_timed.cu:596 for (copy_vector_to_column<<<column_blocks, threads>>>( wk.basis_mat, wk.current_v, dim, 0, dim)): invalid argument

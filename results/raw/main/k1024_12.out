@@ -1,0 +1,8 @@
+initial state loaded from $HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt (right-canonicalised)
+tric Lx=24 Ly=6 N=144 W=38 (raw 53) bonds=828 heff=cutensor sweeps=3 D_max=1024 fresh start gpu_mem_total_gb=150.11
+sweep 1/3 D=1024 chi=1024 E=-73.1636172299 disc=1.29679798551e-05 t=18.45229161s heff_frac=0 mem=18.10137088GB davidson: 286/286 above tol 1e-12, max_resid=0.00640656967926
+sweep 2/3 D=1024 chi=1024 E=-73.1636014336 disc=1.23007921459e-05 t=18.221948487s heff_frac=0 mem=18.10137088GB davidson: 286/286 above tol 1e-12, max_resid=0.00993636822762
+sweep 3/3 D=1024 chi=1024 E=-73.1635923488 disc=1.0557678188e-05 t=18.197271621s heff_frac=0 mem=18.10137088GB davidson: 286/286 above tol 1e-12, max_resid=0.011217513844
+final: davidson_E=-73.163592348762 <psi|H|psi>/<psi|psi>=-73.163592348763 norm=1
+total_run_s=61.608403819
+warm_hits=858 warm_fallbacks=0

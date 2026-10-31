@@ -1,0 +1,9 @@
+initial state loaded from $HOME/DMRG_v6/own_experimental/results/tri2/x8_ours_fromJ0.ckpt (right-canonicalised)
+tric Lx=24 Ly=8 N=192 W=50 (raw 71) bonds=1104 heff=cutensor sweeps=2 D_max=1024 fresh start gpu_mem_total_gb=150.11
+MEMPROF sweep=1 peak_gb=86.1456 mps_gb=2.90805 env_gb=71.6611 other_gb=11.5764
+sweep 1/2 D=1024 chi=1024 E=-97.390647067 disc=6.16619837026e-05 t=28.877977344s heff_frac=0 mem=86.145564672GB davidson: 382/382 above tol 1e-12, max_resid=0.0193001358718
+MEMPROF sweep=2 peak_gb=86.1456 mps_gb=2.90805 env_gb=71.6611 other_gb=11.5764
+sweep 2/2 D=1024 chi=1024 E=-97.3906697189 disc=6.17807474852e-05 t=28.874576553s heff_frac=0 mem=86.145564672GB davidson: 382/382 above tol 1e-12, max_resid=0.0192861579649
+final: davidson_E=-97.39066971891 <psi|H|psi>/<psi|psi>=-97.390669718909 norm=1
+total_run_s=70.735347746
+warm_hits=764 warm_fallbacks=0

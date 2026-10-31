@@ -1,0 +1,16 @@
+disk qn=0 D=512 sweep 1 E=-62.076200732397 t=68.5s used=6.7GB
+disk qn=0 D=512 sweep 2 E=-63.267560073748 t=58.2s used=18.7GB
+disk qn=0 D=1024 sweep 1 E=-63.390470129966 t=191.6s used=82.3GB
+disk qn=0 D=1024 sweep 2 E=-63.396072490052 t=273.7s used=82.3GB
+disk qn=0 D=1536 sweep 1 E=-63.413516822567 t=463.7s used=85.0GB
+disk qn=0 D=1536 sweep 2 E=-63.414127380783 t=614.4s used=85.0GB
+disk qn=0 D=2048 sweep 1 E=-63.421711980963 t=965.8s used=67.7GB
+disk qn=0 D=2048 sweep 2 E=-63.421951457789 t=1158.2s used=74.6GB
+disk qn=0 D=2560 sweep 1 E=-63.425996574174 t=1717.5s used=64.0GB
+disk qn=0 D=2560 sweep 2 E=-63.426097059951 t=1985.6s used=79.2GB
+┌ Warning: Assignment to `sites` in soft scope is ambiguous because a global variable by the same name exists: `sites` will be treated as a new local. Disambiguate by using `local sites` to suppress this warning or `global sites` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:36
+┌ Warning: Assignment to `H` in soft scope is ambiguous because a global variable by the same name exists: `H` will be treated as a new local. Disambiguate by using `local H` to suppress this warning or `global H` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:37
+┌ Warning: Assignment to `psi` in soft scope is ambiguous because a global variable by the same name exists: `psi` will be treated as a new local. Disambiguate by using `local psi` to suppress this warning or `global psi` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:44

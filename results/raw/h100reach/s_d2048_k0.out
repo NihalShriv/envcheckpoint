@@ -1,0 +1,11 @@
+cyl Lx=16 Ly=8 N=128 W=26 (raw 47) bonds=488 heff=cutensor sweeps=6 D_max=2048 fresh start gpu_mem_total_gb=85.0175
+MEMPROF sweep=1 peak_gb=9.73924 mps_gb=0.118839 env_gb=1.52445 other_gb=8.09595
+sweep 1/6 D=256 chi=256 E=-24.5148318715 disc=0.000334788117332 t=1.821296583s heff_frac=0 mem=9.739239424GB davidson: 239/254 above tol 1e-12, max_resid=27.4217089476
+MEMPROF sweep=2 peak_gb=9.73714 mps_gb=0.118839 env_gb=1.52445 other_gb=8.09385
+sweep 2/6 D=256 chi=256 E=-49.3541248111 disc=0.00107294583659 t=1.301089962s heff_frac=0 mem=9.737142272GB davidson: 254/254 above tol 1e-12, max_resid=2.53481287093
+MEMPROF sweep=3 peak_gb=16.7332 mps_gb=0.50052 env_gb=5.9865 other_gb=10.2462
+sweep 3/6 D=1024 chi=1024 E=-61.8938784533 disc=4.4408920985e-15 t=7.231096175s heff_frac=0 mem=16.733241344GB davidson: 254/254 above tol 1e-12, max_resid=1.41902547108
+MEMPROF sweep=4 peak_gb=36.9896 mps_gb=1.83431 env_gb=23.587 other_gb=11.5683
+sweep 4/6 D=1024 chi=1024 E=-63.3092492595 disc=1.15733931472e-05 t=10.546889915s heff_frac=0 mem=36.989632512GB davidson: 254/254 above tol 1e-12, max_resid=0.860584647471
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  cuTENSOR error at src/ct_contract.cu:72 for cutensorContract(handle(), it->second.plan, &one, A, B, &zero, D, D, workspace(it->second.ws), it->second.ws, 0): CUTENSOR_STATUS_INVALID_VALUE

@@ -1,0 +1,9 @@
+gpu_cap_gb=24 ballast_gb=126.11 free_gb=20.4862
+tric Lx=24 Ly=6 N=144 W=38 (raw 53) bonds=828 heff=cutensor sweeps=2 D_max=384 fresh start gpu_mem_total_gb=150.11
+MEMPROF sweep=1 peak_gb=136.358 mps_gb=0.301815 env_gb=5.64741 other_gb=130.408
+sweep 1/2 D=384 chi=384 E=-44.0047932603 disc=3.62362029871e-06 t=2.227384249s heff_frac=0 mem=136.357675008GB davidson: 263/286 above tol 1e-12, max_resid=34.8415587997
+MEMPROF sweep=2 peak_gb=136.358 mps_gb=0.301815 env_gb=5.68547 other_gb=130.37
+sweep 2/2 D=384 chi=384 E=-66.6128270235 disc=1.04408687818e-06 t=1.958498114s heff_frac=0 mem=136.357675008GB davidson: 286/286 above tol 1e-12, max_resid=2.71745929065
+final: davidson_E=-66.61282702347 <psi|H|psi>/<psi|psi>=-66.612827023467 norm=1
+total_run_s=6.410683399
+warm_hits=572 warm_fallbacks=0

@@ -1,0 +1,10 @@
+qn=1 ckpt_k3: rebuilt env updates = 224
+qn=1 ckpt_k5: rebuilt env updates = 256
+qn=1 DMRG ckpt_k3: max |E - E_proj| over 8 sweeps = 0.000e+00  final E = -12.43995120010274
+qn=1 DMRG ckpt_k5: max |E - E_proj| over 8 sweeps = 0.000e+00  final E = -12.43995120010274
+qn=1 TDVP(imag, 4 steps): |1 - <a|b>/(|a||b|)| = 1.776e-15   E_a=-7.18957816925479 E_b=-7.18957816925479
+qn=0 ckpt_k3: rebuilt env updates = 224
+qn=0 ckpt_k5: rebuilt env updates = 256
+qn=0 DMRG ckpt_k3: max |E - E_proj| over 8 sweeps = 0.000e+00  final E = -12.43995119096205
+qn=0 DMRG ckpt_k5: max |E - E_proj| over 8 sweeps = 0.000e+00  final E = -12.43995119096205
+qn=0 TDVP(imag, 4 steps): |1 - <a|b>/(|a||b|)| = 2.109e-15   E_a=-5.49224105669277 E_b=-5.49224105669277

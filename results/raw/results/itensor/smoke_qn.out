@@ -1,0 +1,8 @@
+ckpt qn=1 D=128 sweep 1 E=-61.966206947547 t=133.9s used=2.5GB
+ckpt qn=1 D=128 sweep 2 E=-62.687272992190 t=83.8s used=2.9GB
+┌ Warning: Assignment to `sites` in soft scope is ambiguous because a global variable by the same name exists: `sites` will be treated as a new local. Disambiguate by using `local sites` to suppress this warning or `global sites` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:36
+┌ Warning: Assignment to `H` in soft scope is ambiguous because a global variable by the same name exists: `H` will be treated as a new local. Disambiguate by using `local H` to suppress this warning or `global H` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:37
+┌ Warning: Assignment to `psi` in soft scope is ambiguous because a global variable by the same name exists: `psi` will be treated as a new local. Disambiguate by using `local psi` to suppress this warning or `global psi` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:44

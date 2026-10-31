@@ -1,0 +1,16 @@
+ckpt qn=1 D=512 sweep 1 E=-62.230180391642 t=132.8s used=2.7GB
+ckpt qn=1 D=1024 sweep 1 E=-63.344560138457 t=94.8s used=12.3GB
+ckpt qn=1 D=2048 sweep 1 E=-63.419565368007 t=229.6s used=57.5GB
+ckpt qn=1 D=3072 sweep 1 E=-63.428325586661 t=633.5s used=48.4GB
+ckpt qn=1 D=4096 sweep 1 E=-63.431129262187 t=980.1s used=76.4GB
+ckpt qn=1 D=4608 sweep 1 E=-63.431948242080 t=1281.2s used=52.0GB
+┌ Warning: Assignment to `sites` in soft scope is ambiguous because a global variable by the same name exists: `sites` will be treated as a new local. Disambiguate by using `local sites` to suppress this warning or `global sites` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:36
+┌ Warning: Assignment to `H` in soft scope is ambiguous because a global variable by the same name exists: `H` will be treated as a new local. Disambiguate by using `local H` to suppress this warning or `global H` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:37
+┌ Warning: Assignment to `psi` in soft scope is ambiguous because a global variable by the same name exists: `psi` will be treated as a new local. Disambiguate by using `local psi` to suppress this warning or `global psi` to assign to the existing global variable.
+└ @ ~/DMRG_envck/own_experimental/itensor/ckpt_bench.jl:44
+FAILED at D=5120 sweep 1: Out of GPU memory trying to allocate 1.491 GiB
+Effective GPU memory usage: 99.96% (79.148 GiB/79.179 GiB)
+Memory pool usage: 74.070 GiB (78.562 GiB reserved)
+

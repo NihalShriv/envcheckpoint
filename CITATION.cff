@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "envcheckpoint: exact low-memory environments for DMRG/TDVP"
+authors:
+  - family-names: Shrivastava
+    given-names: Nihal Krishna
+    affiliation: "Birla Institute of Technology and Science, Pilani, K K Birla Goa Campus"
+license: MIT
+repository-code: "https://github.com/NihalShriv/envcheckpoint"
+doi: 10.5281/zenodo.23725023

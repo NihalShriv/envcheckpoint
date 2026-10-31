@@ -1,0 +1,6 @@
+ckpt D=128 sweep 1 E=-328.276964272262 163.9s rss=2.5GB
+ckpt D=128 sweep 2 E=-330.165811661399 62.0s rss=2.9GB
+ckpt D=256 sweep 1 E=-330.457644420867 164.0s rss=3.5GB
+ckpt D=256 sweep 2 E=-330.467328602594 101.8s rss=4.0GB
+ckpt D=512 sweep 1 E=-330.584210567863 676.3s rss=5.9GB
+ckpt D=512 sweep 2 E=-330.589267861864 374.7s rss=6.5GB

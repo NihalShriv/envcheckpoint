@@ -29,10 +29,12 @@ Energies identical to the standard environments (difference 0.0) in every test: 
 - GPU, own CUDA code: bond dimension on one H200 1664 → 3712 (triangular J1-J2 XC6), 2176 → ≥4096 (square YC8); on an 80 GB H100 1280 → 2816 and 1664 → ≥3328.
 - ITensorMPS.jl, U(1), H100 80 GB: maxdim 3584 → 4608 at equal sweep time.
 - Smaller GPUs (H200 capped to 24 / 40 GB usable): bond dimension 640 → 1408 and 768 → 1920 (2.2x, 2.5x), at about 2x the time per sweep.
-- TeNPy (CPU): peak RAM 2.9-4.3x lower with no slowdown; with TeNPy's disk cache, 3.7x less disk.
-- ITensorMPS.jl real-time TDVP (CPU, YC6 12x6, D=768): peak RAM 6.38 → 4.82 GB, and faster per step in our runs.
-- MPSKit.jl (CPU, spin-1 YC6 24x6, D ≤ 768): 1.22x faster, peak RAM 9.35 → 7.63 GB.
-- Wide ab initio MPOs (H16, W=578): little gain; environments are a small share of memory there.
+- TeNPy (CPU): peak RAM 2.9-4.3x lower; timed repeats 1.04-1.14x faster (median 1.09x, 3 pairs, AMD EPYC 7542; 1.15x in one pair on EPYC 9654), with 3-6x less system time and page faults; with TeNPy's disk cache, 3.7x less disk.
+- ITensorMPS.jl real-time TDVP (CPU, YC6 12x6): about 10% slower per step at small D, but at D≈760 a step takes ~1600 s against 3700 s (or more) stored, because Julia's garbage collector scans the larger stored heap; peak RAM 6.38 → 4.82 GB.
+- MPSKit.jl (CPU, spin-1 YC6 24x6): 1.14-1.22x faster; peak RAM 9.35 → 7.63 GB at D=768 (no change at D=512).
+- Wide ab initio MPOs (H16, W=578): 2-5% slower, ~7% less RAM; environments are a small share of memory there.
+
+Raw outputs of every benchmark and the figure script are in [`results/`](results/README.md).
 
 ## Upstream
 - TeNPy: [tenpy/tenpy#713](https://github.com/tenpy/tenpy/pull/713) (option `env_checkpoint_every`)

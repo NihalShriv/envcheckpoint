@@ -1,0 +1,12 @@
+initial state loaded from $HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt (right-canonicalised)
+tric Lx=24 Ly=6 N=144 W=38 (raw 53) bonds=828 heff=cutensor sweeps=8 D_max=2048 fresh start gpu_mem_total_gb=150.11
+sweep 1/8 D=2048 chi=2048 E=-73.1764713332 disc=3.17696319407e-06 t=178.776139887s heff_frac=0 mem=62.594547712GB davidson: 286/286 above tol 1e-12, max_resid=0.00770119357663
+sweep 2/8 D=2048 chi=2048 E=-73.1767484438 disc=3.88886957825e-06 t=227.311772763s heff_frac=0 mem=62.594547712GB davidson: 286/286 above tol 1e-12, max_resid=0.0057522969512
+sweep 3/8 D=2048 chi=2048 E=-73.1768715376 disc=3.85745019671e-06 t=226.886169679s heff_frac=0 mem=62.594547712GB davidson: 286/286 above tol 1e-12, max_resid=0.00487239500409
+sweep 4/8 D=2048 chi=2048 E=-73.1769470749 disc=3.82351199257e-06 t=227.055594247s heff_frac=0 mem=62.594547712GB davidson: 286/286 above tol 1e-12, max_resid=0.00407412698976
+sweep 5/8 D=2048 chi=2048 E=-73.1769946167 disc=3.80160660685e-06 t=227.06989128s heff_frac=0 mem=62.594547712GB davidson: 286/286 above tol 1e-12, max_resid=0.00336901705323
+sweep 6/8 D=2048 chi=2048 E=-73.1770249001 disc=3.78516499466e-06 t=227.496908949s heff_frac=0 mem=62.594547712GB davidson: 285/286 above tol 1e-12, max_resid=0.0028142647969
+sweep 7/8 D=2048 chi=2048 E=-73.1770443838 disc=3.77380383798e-06 t=231.495081598s heff_frac=0 mem=62.594547712GB davidson: 285/286 above tol 1e-12, max_resid=0.00249395524405
+sweep 8/8 D=2048 chi=2048 E=-73.1770570162 disc=3.76654836565e-06 t=231.282694357s heff_frac=0 mem=62.594547712GB davidson: 286/286 above tol 1e-12, max_resid=0.0021963555306
+final: davidson_E=-73.177057016204 <psi|H|psi>/<psi|psi>=-73.177057016211 norm=0.99999999999998
+total_run_s=1834.49638439

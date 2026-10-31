@@ -1,0 +1,13 @@
+cyl Lx=16 Ly=8 N=128 W=26 (raw 47) bonds=488 heff=cutensor sweeps=7 D_max=2560 fresh start gpu_mem_total_gb=150.11
+MEMPROF sweep=1 peak_gb=12.3069 mps_gb=0.118839 env_gb=1.52445 other_gb=10.6636
+sweep 1/7 D=256 chi=256 E=-24.5148318715 disc=0.000334788117332 t=1.208771347s heff_frac=0 mem=12.306939904GB davidson: 239/254 above tol 1e-12, max_resid=27.4217089476
+MEMPROF sweep=2 peak_gb=12.309 mps_gb=0.118839 env_gb=1.52445 other_gb=10.6657
+sweep 2/7 D=256 chi=256 E=-49.3541248111 disc=0.00107294583659 t=0.981155305s heff_frac=0 mem=12.309037056GB davidson: 254/254 above tol 1e-12, max_resid=2.53481287093
+MEMPROF sweep=3 peak_gb=19.3009 mps_gb=0.50052 env_gb=5.9865 other_gb=12.8139
+sweep 3/7 D=1024 chi=1024 E=-61.8938784533 disc=4.4408920985e-15 t=7.326498723s heff_frac=0 mem=19.300941824GB davidson: 254/254 above tol 1e-12, max_resid=1.41902547108
+MEMPROF sweep=4 peak_gb=39.5573 mps_gb=1.83431 env_gb=23.587 other_gb=14.136
+sweep 4/7 D=1024 chi=1024 E=-63.3092492595 disc=1.15733931472e-05 t=9.980959657s heff_frac=0 mem=39.557332992GB davidson: 254/254 above tol 1e-12, max_resid=0.860584647471
+MEMPROF sweep=5 peak_gb=124.104 mps_gb=7.20302 env_gb=91.4559 other_gb=25.4451
+sweep 5/7 D=2048 chi=2048 E=-63.4147596405 disc=3.76428408511e-06 t=59.915276761s heff_frac=0 mem=124.104015872GB davidson: 254/254 above tol 1e-12, max_resid=0.174315865692
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  cuTENSOR error at src/ct_contract.cu:72 for cutensorContract(handle(), it->second.plan, &one, A, B, &zero, D, D, workspace(it->second.ws), it->second.ws, 0): CUTENSOR_STATUS_INVALID_VALUE

@@ -1,0 +1,6 @@
+proj D=128 sweep 1 E=-328.276964272262 164.1s rss=2.5GB
+proj D=128 sweep 2 E=-330.165811661399 57.6s rss=2.7GB
+proj D=256 sweep 1 E=-330.457644420867 158.4s rss=3.8GB
+proj D=256 sweep 2 E=-330.467328602594 103.7s rss=4.3GB
+proj D=512 sweep 1 E=-330.584210567863 753.8s rss=6.2GB
+proj D=512 sweep 2 E=-330.589267861864 523.6s rss=6.3GB

@@ -1,0 +1,15 @@
+cyl Lx=16 Ly=8 N=128 W=26 (raw 47) bonds=488 heff=cutensor sweeps=11 D_max=1024 fresh start gpu_mem_total_gb=150.11
+sweep 1/11 D=128 chi=128 E=-14.6994067108 disc=0.00151847964491 t=1.160763789s heff_frac=0 mem=15.236661248GB davidson: 254/254 above tol 1e-12, max_resid=27.5215970685
+sweep 2/11 D=128 chi=128 E=-39.8356551948 disc=0.00440241668601 t=0.658922161s heff_frac=0 mem=15.2387584GB davidson: 254/254 above tol 1e-12, max_resid=2.12817236717
+sweep 3/11 D=256 chi=256 E=-61.9115570901 disc=2.18625734713e-05 t=1.446090068s heff_frac=0 mem=16.62287872GB davidson: 254/254 above tol 1e-12, max_resid=1.93758692739
+sweep 4/11 D=256 chi=256 E=-62.9936189146 disc=6.57539025238e-05 t=1.193293209s heff_frac=0 mem=16.648044544GB davidson: 254/254 above tol 1e-12, max_resid=0.606872726697
+sweep 5/11 D=512 chi=512 E=-63.2998360293 disc=2.33880916968e-05 t=3.258999495s heff_frac=0 mem=22.079668224GB davidson: 254/254 above tol 1e-12, max_resid=0.270085030713
+sweep 6/11 D=512 chi=512 E=-63.3252153827 disc=4.05883691257e-05 t=3.029769149s heff_frac=0 mem=22.150971392GB davidson: 254/254 above tol 1e-12, max_resid=0.0865161760507
+sweep 7/11 D=512 chi=512 E=-63.3297426963 disc=4.34712650993e-05 t=2.366669157s heff_frac=0 mem=22.150971392GB davidson: 254/254 above tol 1e-12, max_resid=0.0528716551884
+sweep 8/11 D=1024 chi=1024 E=-63.3914780938 disc=8.48131963449e-06 t=10.220948116s heff_frac=0 mem=43.606933504GB davidson: 254/254 above tol 1e-12, max_resid=0.0689737091163
+sweep 9/11 D=1024 chi=1024 E=-63.3951672304 disc=1.40159231641e-05 t=9.920387585s heff_frac=0 mem=43.89634048GB davidson: 254/254 above tol 1e-12, max_resid=0.030863650799
+sweep 10/11 D=1024 chi=1024 E=-63.3958061205 disc=1.51877019594e-05 t=9.932423885s heff_frac=0 mem=43.89634048GB davidson: 254/254 above tol 1e-12, max_resid=0.0246999014607
+sweep 11/11 D=1024 chi=1024 E=-63.3960435775 disc=1.56652368494e-05 t=9.874600577s heff_frac=0 mem=43.89634048GB davidson: 254/254 above tol 1e-12, max_resid=0.0225864420626
+final: davidson_E=-63.396043577471 <psi|H|psi>/<psi|psi>=-63.396043577474 norm=0.99999999999999
+total_run_s=59.229760725
+warm_hits=2461 warm_fallbacks=333

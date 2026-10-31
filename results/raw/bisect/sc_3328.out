@@ -1,0 +1,18 @@
+cyl Lx=16 Ly=8 N=128 W=26 (raw 47) bonds=488 heff=cutensor sweeps=7 D_max=3328 fresh start gpu_mem_total_gb=85.0175
+MEMPROF sweep=1 peak_gb=15.6259 mps_gb=0.118839 env_gb=0.117965 other_gb=15.3891
+sweep 1/7 D=256 chi=256 E=-23.3625623391 disc=0.00080212601211 t=3.172169051s heff_frac=0 mem=15.625945088GB davidson: 239/254 above tol 1e-12, max_resid=27.4217089476
+MEMPROF sweep=2 peak_gb=15.6259 mps_gb=0.118839 env_gb=0.117965 other_gb=15.3891
+sweep 2/7 D=256 chi=256 E=-55.1359894671 disc=0.000941547922472 t=2.615568286s heff_frac=0 mem=15.625945088GB davidson: 254/254 above tol 1e-12, max_resid=2.69892294847
+MEMPROF sweep=3 peak_gb=19.0506 mps_gb=1.78398 env_gb=0.327811 other_gb=16.9388
+sweep 3/7 D=1024 chi=1024 E=-60.8063036879 disc=4.66293670343e-15 t=9.908536591s heff_frac=0 mem=19.050594304GB davidson: 254/254 above tol 1e-12, max_resid=1.4405423779
+MEMPROF sweep=4 peak_gb=21.1771 mps_gb=1.83431 env_gb=1.88744 other_gb=17.4554
+sweep 4/7 D=1024 chi=1024 E=-63.0784606301 disc=1.06103965027e-05 t=19.559931907s heff_frac=0 mem=21.177106432GB davidson: 254/254 above tol 1e-12, max_resid=1.0574640446
+MEMPROF sweep=5 peak_gb=38.6841 mps_gb=7.20302 env_gb=7.54975 other_gb=23.9314
+sweep 5/7 D=2048 chi=2048 E=-63.3932031792 disc=3.12637249733e-06 t=94.165616278s heff_frac=0 mem=38.684131328GB davidson: 254/254 above tol 1e-12, max_resid=0.280847606252
+MEMPROF sweep=6 peak_gb=76.997 mps_gb=18.7374 env_gb=19.9361 other_gb=38.3236
+sweep 6/7 D=3328 chi=3328 E=-63.4276148358 disc=2.49906759964e-06 t=355.085558946s heff_frac=0 mem=76.997001216GB davidson: 254/254 above tol 1e-12, max_resid=0.0882495502249
+MEMPROF sweep=7 peak_gb=80.0106 mps_gb=18.7374 env_gb=19.9361 other_gb=41.3372
+sweep 7/7 D=3328 chi=3328 E=-63.4291885197 disc=3.36921878819e-06 t=429.750588792s heff_frac=0 mem=80.01060864GB davidson: 254/254 above tol 1e-12, max_resid=0.0235091424353
+final: davidson_E=-63.429188519677 <psi|H|psi>/<psi|psi>=-63.429188519682 norm=1
+total_run_s=1002.260248891
+warm_hits=1346 warm_fallbacks=432

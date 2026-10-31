@@ -1,0 +1,16 @@
+cyl Lx=16 Ly=8 N=128 W=26 (raw 47) bonds=488 heff=cutensor sweeps=6 D_max=1536 fresh start gpu_mem_total_gb=85.0175
+MEMPROF sweep=1 peak_gb=7.73436 mps_gb=0.118839 env_gb=1.52445 other_gb=6.09107
+sweep 1/6 D=256 chi=256 E=-24.5148318715 disc=0.000334788117332 t=1.798397768s heff_frac=0 mem=7.734362112GB davidson: 239/254 above tol 1e-12, max_resid=27.4217089476
+MEMPROF sweep=2 peak_gb=7.73646 mps_gb=0.118839 env_gb=1.52445 other_gb=6.09317
+sweep 2/6 D=256 chi=256 E=-49.3541248111 disc=0.00107294583659 t=1.136350458s heff_frac=0 mem=7.736459264GB davidson: 254/254 above tol 1e-12, max_resid=2.53481287093
+MEMPROF sweep=3 peak_gb=14.7284 mps_gb=0.50052 env_gb=5.9865 other_gb=8.24135
+sweep 3/6 D=1024 chi=1024 E=-61.8938784533 disc=4.4408920985e-15 t=7.893159406s heff_frac=0 mem=14.728364032GB davidson: 254/254 above tol 1e-12, max_resid=1.41902547108
+MEMPROF sweep=4 peak_gb=34.9848 mps_gb=1.83431 env_gb=23.587 other_gb=9.56343
+sweep 4/6 D=1024 chi=1024 E=-63.3092492595 disc=1.15733931472e-05 t=10.201437844s heff_frac=0 mem=34.9847552GB davidson: 254/254 above tol 1e-12, max_resid=0.860584647471
+MEMPROF sweep=5 peak_gb=69.9401 mps_gb=4.07407 env_gb=51.5702 other_gb=14.2958
+sweep 5/6 D=1536 chi=1536 E=-63.407951636 disc=1.04043826928e-05 t=29.363550777s heff_frac=0 mem=69.940084736GB davidson: 254/254 above tol 1e-12, max_resid=0.155060287291
+MEMPROF sweep=6 peak_gb=70.8083 mps_gb=4.07407 env_gb=52.3495 other_gb=14.3848
+sweep 6/6 D=1536 chi=1536 E=-63.4133415299 disc=1.02676822935e-05 t=29.944895842s heff_frac=0 mem=70.808305664GB davidson: 254/254 above tol 1e-12, max_resid=0.0387221224435
+final: davidson_E=-63.413341529932 <psi|H|psi>/<psi|psi>=-63.413341529933 norm=1
+total_run_s=99.478407098
+warm_hits=1197 warm_fallbacks=327

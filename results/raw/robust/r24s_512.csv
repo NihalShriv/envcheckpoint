@@ -1,0 +1,3 @@
+model,Lx,Ly,N,W,J2,heff,sweep,D_cap,max_chi,energy,dE,max_disc,sum_disc,sweep_s,heff_s,heff_frac,davidson_s,svd_s,env_s,n_heff,peak_mem_gb,n_solves,n_unconverged,max_residual,davidson_tol
+tric,24,6,144,38,0.12,cutensor,1,512,512,-34.2657002389,nan,2.53880008031e-05,7.0670107852e-05,3.557048031,0,0,0,0,0,569,141.6445952,286,261,34.8492705645,1e-12
+tric,24,6,144,38,0.12,cutensor,2,512,512,-60.6805319361,-26.4148316972,0.000436005501593,0.00197263737486,3.329897576,0,0,0,0,0,572,141.678149632,286,286,5.66287136128,1e-12

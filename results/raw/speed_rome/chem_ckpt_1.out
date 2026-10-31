@@ -1,0 +1,7 @@
+MPO built in 220s, W=578, rss=2.3GB
+ckpt D=128 sweep 1 E=-8.582204810147 25.5s rss=2.3GB
+ckpt D=128 sweep 2 E=-8.637248587839 20.0s rss=2.5GB
+ckpt D=256 sweep 1 E=-8.652409625563 44.4s rss=3.2GB
+ckpt D=256 sweep 2 E=-8.654740587785 55.5s rss=3.8GB
+ckpt D=512 sweep 1 E=-8.660446216393 115.3s rss=6.1GB
+ckpt D=512 sweep 2 E=-8.660912039199 150.0s rss=6.2GB

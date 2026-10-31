@@ -1,0 +1,12 @@
+proj step 1 t=0.05 chi=4 E=-1.500000000404 69.5s rss=0.8GB
+proj step 2 t=0.10 chi=12 E=-1.500000000337 5.6s rss=0.8GB
+proj step 3 t=0.15 chi=31 E=-1.500000000197 13.9s rss=0.9GB
+proj step 4 t=0.20 chi=65 E=-1.499999999837 25.0s rss=1.0GB
+proj step 5 t=0.25 chi=96 E=-1.499999999574 59.2s rss=1.1GB
+proj step 6 t=0.30 chi=136 E=-1.499999999247 118.0s rss=1.3GB
+proj step 7 t=0.35 chi=191 E=-1.499999998918 185.2s rss=1.7GB
+proj step 8 t=0.40 chi=258 E=-1.499999998552 306.6s rss=2.2GB
+proj step 9 t=0.45 chi=344 E=-1.499999998115 415.2s rss=3.2GB
+proj step 10 t=0.50 chi=455 E=-1.499999997678 572.8s rss=4.4GB
+proj step 11 t=0.55 chi=589 E=-1.499999997208 895.4s rss=4.9GB
+proj step 12 t=0.60 chi=758 E=-1.499999996724 3716.5s rss=5.5GB

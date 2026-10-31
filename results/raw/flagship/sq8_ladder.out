@@ -1,0 +1,57 @@
+cyl Lx=16 Ly=8 N=128 W=26 (raw 47) bonds=488 heff=cutensor sweeps=27 D_max=3072 fresh start gpu_mem_total_gb=150.11
+MEMPROF sweep=1 peak_gb=15.3205 mps_gb=0.118839 env_gb=0.276824 other_gb=14.9249
+sweep 1/27 D=256 chi=256 E=-60.1765921167 disc=2.97446118803e-05 t=5.308212406s heff_frac=0 mem=15.320547328GB davidson: 141/254 above tol 1e-12, max_resid=2.81761189584
+MEMPROF sweep=2 peak_gb=15.3205 mps_gb=0.118839 env_gb=0.276824 other_gb=14.9249
+sweep 2/27 D=256 chi=256 E=-63.1379396663 disc=0.000131662851612 t=2.649284283s heff_frac=0 mem=15.320547328GB davidson: 254/254 above tol 1e-12, max_resid=0.44773219652
+MEMPROF sweep=3 peak_gb=15.3205 mps_gb=0.118839 env_gb=0.276824 other_gb=14.9249
+sweep 3/27 D=256 chi=256 E=-63.164780974 disc=0.000150575132517 t=2.484160562s heff_frac=0 mem=15.320547328GB davidson: 251/254 above tol 1e-12, max_resid=0.00699362639906
+MEMPROF sweep=4 peak_gb=17.2185 mps_gb=0.466966 env_gb=1.05906 other_gb=15.6924
+sweep 4/27 D=512 chi=512 E=-63.3231326354 disc=2.48298187114e-05 t=5.148632633s heff_frac=0 mem=17.218469888GB davidson: 252/254 above tol 1e-12, max_resid=0.00508169747492
+MEMPROF sweep=5 peak_gb=17.2311 mps_gb=0.466966 env_gb=1.07112 other_gb=15.693
+sweep 5/27 D=512 chi=512 E=-63.330997817 disc=4.79117635916e-05 t=5.765700159s heff_frac=0 mem=17.2310528GB davidson: 251/254 above tol 1e-12, max_resid=0.00171866637449
+MEMPROF sweep=6 peak_gb=17.2311 mps_gb=0.466966 env_gb=1.07112 other_gb=15.693
+sweep 6/27 D=512 chi=512 E=-63.3315310797 disc=5.05218462475e-05 t=5.788571949s heff_frac=0 mem=17.2310528GB davidson: 254/254 above tol 1e-12, max_resid=0.00144699123236
+MEMPROF sweep=7 peak_gb=24.5564 mps_gb=1.83431 env_gb=4.23625 other_gb=18.4858
+sweep 7/27 D=1024 chi=1024 E=-63.3934426396 disc=9.41803770238e-06 t=17.565036656s heff_frac=0 mem=24.556404736GB davidson: 251/254 above tol 1e-12, max_resid=0.00291068287284
+MEMPROF sweep=8 peak_gb=24.569 mps_gb=1.83431 env_gb=4.24831 other_gb=18.4864
+sweep 8/27 D=1024 chi=1024 E=-63.3960168633 disc=1.76567689146e-05 t=22.195448426s heff_frac=0 mem=24.568987648GB davidson: 250/254 above tol 1e-12, max_resid=0.000935792406565
+MEMPROF sweep=9 peak_gb=24.569 mps_gb=1.83431 env_gb=4.24831 other_gb=18.4864
+sweep 9/27 D=1024 chi=1024 E=-63.3962099798 disc=1.86261129212e-05 t=22.270344203s heff_frac=0 mem=24.568987648GB davidson: 250/254 above tol 1e-12, max_resid=0.000768502807116
+MEMPROF sweep=10 peak_gb=24.569 mps_gb=1.83431 env_gb=4.24831 other_gb=18.4864
+sweep 10/27 D=1024 chi=1024 E=-63.396264429 disc=1.89048282435e-05 t=22.275304422s heff_frac=0 mem=24.568987648GB davidson: 250/254 above tol 1e-12, max_resid=0.00077800774358
+MEMPROF sweep=11 peak_gb=36.8247 mps_gb=4.07407 env_gb=9.53156 other_gb=23.2191
+sweep 11/27 D=1536 chi=1536 E=-63.4134591291 disc=7.52668047121e-06 t=52.560376484s heff_frac=0 mem=36.824743936GB davidson: 250/254 above tol 1e-12, max_resid=0.00152520066235
+MEMPROF sweep=12 peak_gb=36.9254 mps_gb=4.07407 env_gb=9.54361 other_gb=23.3077
+sweep 12/27 D=1536 chi=1536 E=-63.4140876885 disc=9.80078752411e-06 t=63.415958054s heff_frac=0 mem=36.925407232GB davidson: 250/254 above tol 1e-12, max_resid=0.000628481321547
+MEMPROF sweep=13 peak_gb=36.9254 mps_gb=4.07407 env_gb=9.54361 other_gb=23.3077
+sweep 13/27 D=1536 chi=1536 E=-63.4141644807 disc=1.01385555775e-05 t=63.200908006s heff_frac=0 mem=36.925407232GB davidson: 249/254 above tol 1e-12, max_resid=0.000632579404785
+MEMPROF sweep=14 peak_gb=36.9254 mps_gb=4.07407 env_gb=9.54361 other_gb=23.3077
+sweep 14/27 D=1536 chi=1536 E=-63.414188898 disc=1.02454196731e-05 t=63.52297762s heff_frac=0 mem=36.925407232GB davidson: 248/254 above tol 1e-12, max_resid=0.000647478380987
+MEMPROF sweep=15 peak_gb=53.9438 mps_gb=7.20302 env_gb=16.945 other_gb=29.7958
+sweep 15/27 D=2048 chi=2048 E=-63.4216833249 disc=5.72048415437e-06 t=120.042183796s heff_frac=0 mem=53.943795712GB davidson: 249/254 above tol 1e-12, max_resid=0.0011086563779
+MEMPROF sweep=16 peak_gb=53.9564 mps_gb=7.20302 env_gb=16.957 other_gb=29.7963
+sweep 16/27 D=2048 chi=2048 E=-63.421918363 disc=7.04618557534e-06 t=140.105944502s heff_frac=0 mem=53.956378624GB davidson: 250/254 above tol 1e-12, max_resid=0.000573814810616
+MEMPROF sweep=17 peak_gb=53.9564 mps_gb=7.20302 env_gb=16.957 other_gb=29.7963
+sweep 17/27 D=2048 chi=2048 E=-63.4219530426 disc=7.30071195454e-06 t=140.379612366s heff_frac=0 mem=53.956378624GB davidson: 250/254 above tol 1e-12, max_resid=0.000576912791631
+MEMPROF sweep=18 peak_gb=53.9564 mps_gb=7.20302 env_gb=16.957 other_gb=29.7963
+sweep 18/27 D=2048 chi=2048 E=-63.4219644436 disc=7.37738262702e-06 t=140.169874715s heff_frac=0 mem=53.956378624GB davidson: 250/254 above tol 1e-12, max_resid=0.000579818705234
+MEMPROF sweep=19 peak_gb=75.9974 mps_gb=11.1624 env_gb=26.4765 other_gb=38.3585
+sweep 19/27 D=2560 chi=2560 E=-63.4259732837 disc=4.82284513181e-06 t=234.565979847s heff_frac=0 mem=75.997446144GB davidson: 249/254 above tol 1e-12, max_resid=0.00083320208819
+MEMPROF sweep=20 peak_gb=76.6056 mps_gb=11.1624 env_gb=26.4765 other_gb=38.9666
+sweep 20/27 D=2560 chi=2560 E=-63.4260760433 disc=5.53816409887e-06 t=266.350492343s heff_frac=0 mem=76.605620224GB davidson: 249/254 above tol 1e-12, max_resid=0.000520027470459
+MEMPROF sweep=21 peak_gb=76.6056 mps_gb=11.1624 env_gb=26.4765 other_gb=38.9666
+sweep 21/27 D=2560 chi=2560 E=-63.4260930791 disc=5.7053234408e-06 t=265.978426856s heff_frac=0 mem=76.605620224GB davidson: 250/254 above tol 1e-12, max_resid=0.000534958377034
+MEMPROF sweep=22 peak_gb=76.6056 mps_gb=11.1624 env_gb=26.4765 other_gb=38.9666
+sweep 22/27 D=2560 chi=2560 E=-63.4260984931 disc=5.76979026068e-06 t=266.695591918s heff_frac=0 mem=76.605620224GB davidson: 250/254 above tol 1e-12, max_resid=0.000541724862907
+MEMPROF sweep=23 peak_gb=102.862 mps_gb=15.9943 env_gb=38.1262 other_gb=48.7415
+sweep 23/27 D=3072 chi=3072 E=-63.4284854666 disc=3.89231221576e-06 t=394.864489897s heff_frac=0 mem=102.861963264GB davidson: 249/254 above tol 1e-12, max_resid=0.000729133577201
+MEMPROF sweep=24 peak_gb=105.832 mps_gb=15.9943 env_gb=38.1262 other_gb=51.711
+sweep 24/27 D=3072 chi=3072 E=-63.4285519174 disc=4.33753161144e-06 t=434.225170667s heff_frac=0 mem=105.831530496GB davidson: 246/254 above tol 1e-12, max_resid=0.000499476817996
+MEMPROF sweep=25 peak_gb=105.832 mps_gb=15.9943 env_gb=38.1262 other_gb=51.711
+sweep 25/27 D=3072 chi=3072 E=-63.4285696174 disc=4.47227600076e-06 t=434.062597468s heff_frac=0 mem=105.831530496GB davidson: 246/254 above tol 1e-12, max_resid=0.000505603163784
+MEMPROF sweep=26 peak_gb=105.832 mps_gb=15.9943 env_gb=38.1262 other_gb=51.711
+sweep 26/27 D=3072 chi=3072 E=-63.4285769133 disc=4.53566469727e-06 t=435.47540007s heff_frac=0 mem=105.831530496GB davidson: 248/254 above tol 1e-12, max_resid=0.000510201067384
+MEMPROF sweep=27 peak_gb=105.832 mps_gb=15.9943 env_gb=38.1262 other_gb=51.711
+sweep 27/27 D=3072 chi=3072 E=-63.4285802768 disc=4.56778664792e-06 t=433.961934404s heff_frac=0 mem=105.831530496GB davidson: 249/254 above tol 1e-12, max_resid=0.000514188033782
+final: davidson_E=-63.428580276846 <psi|H|psi>/<psi|psi>=-63.428580276908 norm=0.99999999999998
+total_run_s=4296.718293975

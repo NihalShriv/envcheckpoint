@@ -1,0 +1,4 @@
+gpu_cap_gb=40 ballast_gb=110.11 free_gb=34.4574
+tric Lx=24 Ly=6 N=144 W=38 (raw 53) bonds=828 heff=cutensor sweeps=2 D_max=896 fresh start gpu_mem_total_gb=150.11
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  CUDA error at src/heff_cutensor.cu:19 for cudaMalloc(&p, need): out of memory
