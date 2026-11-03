@@ -34,7 +34,8 @@ Energies identical to the standard environments (difference 0.0) in every test: 
 - MPSKit.jl (CPU, spin-1 YC6 24x6): 1.14-1.22x faster; peak RAM 9.35 → 7.63 GB at D=768 (no change at D=512).
 - Wide ab initio MPOs (H16, W=578): 2-5% slower, ~7% less RAM; environments are a small share of memory there.
 
-Raw outputs of every benchmark and the figure script are in [`results/`](results/README.md).
+The standalone GPU DMRG code behind the paper's GPU results, with build instructions and the exact run scripts, is
+in [`cuda/`](cuda/README.md). Raw outputs of every benchmark and the figure script are in [`results/`](results/README.md).
 
 ## Upstream
 - TeNPy: [tenpy/tenpy#713](https://github.com/tenpy/tenpy/pull/713) (option `env_checkpoint_every`)
