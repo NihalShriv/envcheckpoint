@@ -1,0 +1,55 @@
+NVIDIA H200 NVL
+start=Tue Nov  3 18:16:04 IST 2026
+--- A_std_k0: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:3 envck=0 18:16:04
+exit=0 18:17:55
+2,1024,-73.1635252559,32.246295207,51.982958592,286,0.00105720247431
+3,1024,-73.1635254513,32.354934315,51.982958592,286,0.00105726984324
+--- A_std_k12: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:3 envck=12 18:17:55
+exit=0 18:19:44
+2,1024,-73.1635252559,34.143763041,19.23383296,286,0.00105720247431
+3,1024,-73.1635254513,34.323077479,19.23383296,286,0.00105726984324
+--- C_k0_cols8_c1: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:2 envck=0 dav_cols=8 heff_chunks=1 18:19:45
+exit=0 18:20:55
+1,1024,-73.1635249827,32.488411664,51.982958592,285,0.00105732315105
+2,1024,-73.1635252559,32.274586813,51.982958592,286,0.00105720247431
+--- C_k0_cols8_c4: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:2 envck=0 dav_cols=8 heff_chunks=4 18:20:55
+exit=0 18:22:14
+1,1024,-73.1635249827,37.034592979,50.1039104,285,0.00105732315104
+2,1024,-73.1635252559,36.862878432,50.1039104,286,0.00105720247427
+--- C_k0_cols160_c1: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:2 envck=0 dav_cols=160 heff_chunks=1 18:22:15
+exit=0 18:23:25
+1,1024,-73.1635249827,32.437533331,62.18350592,285,0.00105732315105
+2,1024,-73.1635252559,32.248566838,62.18350592,286,0.00105720247431
+--- C_k0_cols160_c4: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:2 envck=0 dav_cols=160 heff_chunks=4 18:23:25
+exit=0 18:24:44
+1,1024,-73.1635249827,36.946080326,60.304457728,285,0.00105732315104
+2,1024,-73.1635252559,36.94876135,60.304457728,286,0.00105720247427
+--- C_k12_cols8_c1: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:2 envck=12 dav_cols=8 heff_chunks=1 18:24:45
+exit=0 18:25:58
+1,1024,-73.1635249827,34.260692723,19.23383296,285,0.00105732315105
+2,1024,-73.1635252559,34.04290078,19.23383296,286,0.00105720247431
+--- C_k12_cols8_c4: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:2 envck=12 dav_cols=8 heff_chunks=4 18:25:59
+exit=0 18:27:22
+1,1024,-73.1635249827,38.923768416,17.354784768,285,0.00105732315104
+2,1024,-73.1635252559,38.658494512,17.354784768,286,0.00105720247427
+--- C_k12_cols160_c1: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:2 envck=12 dav_cols=160 heff_chunks=1 18:27:22
+exit=0 18:28:36
+1,1024,-73.1635249827,34.192899747,29.434380288,285,0.00105732315105
+2,1024,-73.1635252559,34.016210866,29.434380288,286,0.00105720247431
+--- C_k12_cols160_c4: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=4 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:2 envck=12 dav_cols=160 heff_chunks=4 18:28:36
+exit=0 18:29:59
+1,1024,-73.1635249827,38.868100304,27.555332096,285,0.00105732315104
+2,1024,-73.1635252559,38.646716241,27.555332096,286,0.00105720247427
+--- D_conv_k0: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=0 dav_cols=32 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:3 envck=0 18:29:59
+exit=0 19:04:40
+2,1024,-73.1635159108,690.308268937,53.587279872,266,6.69680137031e-12
+3,1024,-73.1635158004,689.339858215,53.587279872,269,8.41421725884e-12
+--- D_conv_k12: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=gram dav_maxmv=0 dav_cols=32 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/v3_stab_std_from_low.ckpt sched=1024:3 envck=12 19:04:40
+exit=0 19:39:30
+2,1024,-73.1635159108,693.930585714,20.83815424,266,6.69680137031e-12
+3,1024,-73.1635158004,692.847595846,20.83815424,269,8.41421725884e-12
+--- B_ladder: model=cyl Lx=16 Ly=8 J2=0.5 thresh=0 seed=1 heff=cutensor compress=1 production=1 memtrack=1 memprof=1 svd=gram dav_maxmv=4 dav_fast=1 sched=256:6,512:8,1024:16,1536:14,2048:12,2560:10,3072:12 conv=1 stage_tol=1e-6 final_tol=1e-7 kick_tol=1e-7 envck=12 heff_chunks=4 19:39:30
+exit=0 23:02:49
+70,3072,-63.4285861897,460.858330137,95.159123968,246,0.000512423194842
+71,3072,-63.4285862671,461.415237153,95.092015104,246,0.00051256939472
+--- B_strict: model=cyl Lx=16 Ly=8 J2=0.5 thresh=0 seed=1 heff=cutensor compress=1 production=1 memtrack=1 memprof=1 svd=gram dav_maxmv=0 dav_cols=32 init_from=$SCRATCH/dmrg_envck/review_gpu/B_ladder.ckpt sched=3072:3 envck=12 heff_chunks=4 max_hours=2.970833333333333 23:02:49

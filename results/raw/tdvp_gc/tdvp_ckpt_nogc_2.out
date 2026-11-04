@@ -1,0 +1,12 @@
+ckpt_nogc step 1 t=0.05 chi=4 E=-1.500000000404 70.5s rss=1.0GB
+ckpt_nogc step 2 t=0.10 chi=12 E=-1.500000000337 5.6s rss=1.0GB
+ckpt_nogc step 3 t=0.15 chi=31 E=-1.500000000197 14.1s rss=1.0GB
+ckpt_nogc step 4 t=0.20 chi=65 E=-1.499999999837 24.9s rss=1.1GB
+ckpt_nogc step 5 t=0.25 chi=96 E=-1.499999999574 66.0s rss=1.2GB
+ckpt_nogc step 6 t=0.30 chi=136 E=-1.499999999247 119.3s rss=1.3GB
+ckpt_nogc step 7 t=0.35 chi=191 E=-1.499999998918 208.4s rss=1.4GB
+ckpt_nogc step 8 t=0.40 chi=258 E=-1.499999998552 319.1s rss=1.7GB
+ckpt_nogc step 9 t=0.45 chi=344 E=-1.499999998115 485.7s rss=2.2GB
+ckpt_nogc step 10 t=0.50 chi=455 E=-1.499999997678 686.6s rss=2.8GB
+ckpt_nogc step 11 t=0.55 chi=589 E=-1.499999997208 1067.5s rss=4.0GB
+ckpt_nogc step 12 t=0.60 chi=758 E=-1.499999996724 1744.0s rss=4.6GB

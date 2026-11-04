@@ -36,3 +36,14 @@ usually a `.csv` (one row per sweep), and for the GPU code a `.timing` file. Fil
 | `speed` | Table VI (Genoa row) | AMD EPYC 9654, one TeNPy pair (`tenpy_run1_partial.jsonl`) |
 
 Software: TeNPy 1.1.1 with numpy 2.4.6 (OpenBLAS 0.3.31) for `speed_rome`; ITensorMPS.jl 0.4.2; Julia 1.10.
+
+## Checks added after review (released v7 build, `cuda/scripts/review_*.sh`, `julia/itensor/bench/`)
+
+| directory | content |
+|---|---|
+| `review` (`A_*`) | rerun of a `stats` pair with the released build: energies, discarded weights and residuals identical to `stats/r1_std_k*` |
+| `review` (`C_*`) | ablation, triangular XC6 D=1024: stored/checkpointed x Davidson basis (8/160) x chunks (1/4); checkpointing changes no digit, chunking changes the last digits |
+| `review` (`D_*`) | converged local solves (no matvec cap), stored vs checkpointed |
+| `review` (`B_ladder`) | square YC8 ladder to D=3072 with the settings of `conv`; same final energy to all printed digits |
+| `review` (`B_strict24`) | 2 sweeps at D=3072 from `B_ladder`, up to 24 matvecs per solve, tolerance 1e-8 |
+| `tdvp_gc` | ITensorMPS.jl TDVP as in `speed_rome`, with `CheckpointedProjMPO(H; after_drop = () -> nothing)` (no forced collection), two pairs |
