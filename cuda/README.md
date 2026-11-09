@@ -28,7 +28,7 @@ Options are `key=value`; unknown keys are rejected.
 | `model=cyl Lx= Ly= J2=` | square J1-J2 cylinder (YC); `model=tric` triangular J1-J2 XC cylinder |
 | `sched=D:n,D:n,...` | bond dimension schedule (n sweeps at each D) |
 | `envck=k` | checkpointing: keep every k-th environment (0 = store all) |
-| `ck_retain=0\|1` | 1 (default): checkpoints are kept from the previous half-sweep; 0: rebuilt at the start of every half-sweep, as in builds up to v7 |
+| `ck_retain=0\|1` | 1 (default): checkpoints are kept from the previous half-sweep; 0: rebuilt at the start of every half-sweep, as in builds up to v7 (use for the earlier benchmarks) |
 | `envcache=1` | stored runs: keep environments across half-sweeps instead of rebuilding them |
 | `envck2=k2` | two-level schedule inside a rebuilt segment |
 | `heff_chunks=c` | split the effective-Hamiltonian intermediate into c chunks (changes summation order) |
@@ -60,8 +60,11 @@ Each script sources `scripts/envck_hdr.sh` and writes to `own_experimental/resul
 `$SCRATCH`/`$HOME` replace account-specific paths.
 
 The runs were made over several days with successive builds of this source tree (`dmrg_envck_v1` to `_v7`; each
-script names the build it used). Later builds add options but leave the default behaviour unchanged. The source
-here is the final build (v7) and `dmrg_cap` (v7 plus `gpu_cap_gb`).
+script names the build it used). The source here is v8 (`dmrg_envck`, and `dmrg_cap` = v8 plus `gpu_cap_gb`).
+v8 adds `ck_retain`, whose default (1) keeps checkpoints across half-sweeps; v1 to v7 rebuilt them at the start of
+every half-sweep. To reproduce the earlier checkpointed benchmarks (all of `../results/raw/` except `review_retain`),
+add `ck_retain=0`; with it v8 does the same work as v7 and gives identical energies. Stored runs (`envck=0`) are
+unaffected. `scripts/review_retain.sh` compares both settings with stored runs with and without `envcache=1`.
 
 ## Starting states
 
