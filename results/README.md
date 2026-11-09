@@ -47,3 +47,4 @@ Software: TeNPy 1.1.1 with numpy 2.4.6 (OpenBLAS 0.3.31) for `speed_rome`; ITens
 | `review` (`B_ladder`) | square YC8 ladder to D=3072 with the settings of `conv`; same final energy to all printed digits |
 | `review` (`B_strict24`) | 2 sweeps at D=3072 from `B_ladder`, up to 24 matvecs per solve, tolerance 1e-8 |
 | `tdvp_gc` | ITensorMPS.jl TDVP as in `speed_rome`, with `CheckpointedProjMPO(H; after_drop = () -> nothing)` (no forced collection), two pairs |
+| `review_retain` | v8 build (`ck_retain`), triangular XC6 D=1024, 3 sweeps x 3 runs, both solvers: stored (`envck=0`), stored with caching (`envcache=1`), checkpointed with rebuild (`ck_retain=0`) and with retained checkpoints (`ck_retain=1`); identical energies in all runs |

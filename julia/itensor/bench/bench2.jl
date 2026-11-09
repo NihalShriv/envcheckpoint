@@ -1,9 +1,9 @@
 # CPU benchmarks of CheckpointedProjMPO vs ProjMPO (one store per process, so Sys.maxrss is that store's peak).
 #   MODE=tdvp : real-time 2-site TDVP quench from Neel, Heisenberg YC6 (Lx x 6), U(1); MAXDIM, NSTEPS, DT
 #   MODE=chem : ab initio DMRG from an integral file (chem_ints.py), U(1)xU(1) electrons; DS = maxdim ladder
-# Usage: STORE=proj|ckpt MODE=... julia --project=<itensor env> bench2.jl <out_prefix> [intfile]
+# Usage: STORE=proj|ckpt|ckpt_nogc MODE=tdvp|chem julia --project=<this directory> bench2.jl <out_prefix> [intfile]
 using ITensors, ITensorMPS, Printf, Random, LinearAlgebra
-include(joinpath(@__DIR__, "CheckpointedProjMPOs.jl")); using .CheckpointedProjMPOs
+include(joinpath(@__DIR__, "..", "CheckpointedProjMPOs.jl")); using .CheckpointedProjMPOs
 function j1j2_bonds(Lx, Ly, J2)
     s(x, y) = x * Ly + mod(y, Ly) + 1
     b = Tuple{Int,Int,Float64}[]

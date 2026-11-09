@@ -14,6 +14,8 @@
 //   warm_eta  : > 0 = flow truncation for svd=warm: X <- qr(X + eta rho X) (eta -> inf = plain step)
 //   conv      : 1 = convergence-driven stages (sched D:n = max n sweeps), stage_tol, kick_tol, final_tol, conv_min
 //   envcache  : 1 = keep environments across half-sweeps (no full rebuild per pass; same results)
+//   envck     : k > 0 = keep every k-th environment, recompute the rest; ck_retain=1 (default) keeps the
+//               checkpoints from the previous half-sweep, ck_retain=0 rebuilds them per half-sweep (<= v7)
 //   ritz_T    : T > 0 = stochastic Ritz selection at the Davidson budget exit (mix 2nd Ritz vector, weight
 //               U(0,1) exp(-gap/T), random sign), off for the last ritz_clean sweeps (default 3)
 //   accel     : 1 = feasibility probe: tensor-wise extrapolation along the last sweep + exact-energy line search
@@ -237,7 +239,7 @@ int main(int argc, char** argv)
         {"ckpt","results/v6/run.ckpt"}, {"out","results/v6/run.csv"}, {"max_hours","1e9"},
         {"thresh","0"}, {"seed","1"}, {"production","0"}, {"compress","0"},
         {"dav_maxmv","0"}, {"dav_tol","0"}, {"svd","jacobi"},
-        {"solver","davidson"}, {"cheb_deg","3"}, {"cheb_restarts","1"}, {"cheb_margin","0.05"}, {"dav_fast","0"}, {"warm_iters","1"}, {"diag","0"}, {"diis","0"}, {"heff_noise","0"}, {"noise_clean","3"}, {"lowp","fp64"}, {"lowp_clean","3"}, {"bondlog","0"}, {"accel","0"}, {"ritz_T","0"}, {"ritz_clean","3"}, {"symdiag","0"}, {"envcache","0"}, {"conv","0"}, {"stage_tol","1e-5"}, {"final_tol","1e-8"}, {"kick_tol","1e-7"}, {"conv_min","2"}, {"warm_eta","0"}, {"warm_orth","0"}, {"flow_final","0"}, {"dumptheta","0"}, {"init","random"}, {"init_from",""}, {"evalonly","0"}, {"envspec","0"}, {"envck","0"}, {"memtrack","0"}, {"envdisk",""}, {"envck2","0"}, {"envdisk_async","0"}, {"memprof","0"}, {"dav_cols",""}, {"heff_chunks","1"}, {"envpin","0"}, {"envpin_prefetch","2"} };
+        {"solver","davidson"}, {"cheb_deg","3"}, {"cheb_restarts","1"}, {"cheb_margin","0.05"}, {"dav_fast","0"}, {"warm_iters","1"}, {"diag","0"}, {"diis","0"}, {"heff_noise","0"}, {"noise_clean","3"}, {"lowp","fp64"}, {"lowp_clean","3"}, {"bondlog","0"}, {"accel","0"}, {"ritz_T","0"}, {"ritz_clean","3"}, {"symdiag","0"}, {"envcache","0"}, {"conv","0"}, {"stage_tol","1e-5"}, {"final_tol","1e-8"}, {"kick_tol","1e-7"}, {"conv_min","2"}, {"warm_eta","0"}, {"warm_orth","0"}, {"flow_final","0"}, {"dumptheta","0"}, {"init","random"}, {"init_from",""}, {"evalonly","0"}, {"envspec","0"}, {"envck","0"}, {"ck_retain","1"}, {"memtrack","0"}, {"envdisk",""}, {"envck2","0"}, {"envdisk_async","0"}, {"memprof","0"}, {"dav_cols",""}, {"heff_chunks","1"}, {"envpin","0"}, {"envpin_prefetch","2"} };
     for (int i = 1; i < argc; ++i) {
         std::string s = argv[i];
         auto eq = s.find('=');
@@ -577,6 +579,12 @@ int main(int argc, char** argv)
     };
     std::unique_ptr<Environment> cenv;    // envcache: persistent environments across half-sweeps
     bool cache_R = false;                 // envcache: R blocks from the last R->L pass match psi
+    // ck_retain=1 (default with envck): each half-sweep keeps every k-th block it builds as the checkpoints of the
+    // next half-sweep, so no rebuild pass is needed (exact: sites behind the bond are not touched again before
+    // those blocks are read). ck_retain=0 rebuilds the checkpoints at the start of every half-sweep (builds <= v7).
+    // Offload (envpin, envdisk) always rebuilds.
+    const bool ck_retain = envck > 0 && arg["ck_retain"] == "1" && !envpin && envdisk.empty();
+    bool ck_have_R = false;               // ck_retain: R checkpoints from the last R->L pass match psi
     // conv=1: convergence-driven schedule. sched entries D:n become stages with at most n sweeps; a stage ends when
     // |dE| per sweep < stage_tol (after >= conv_min sweeps). Kicks (heff_noise / lowp / ritz_T) stay on until, at
     // the final D, |dE| < kick_tol; then clean sweeps until |dE| < final_tol (>= conv_min clean sweeps).
@@ -685,10 +693,10 @@ int main(int argc, char** argv)
         {
             auto te = clk::now();
             std::unique_ptr<Environment> tmp;
-            if (envcache && !cenv) cenv = std::make_unique<Environment>(N);
-            if (!envcache) tmp = std::make_unique<Environment>(N);
-            Environment& env = envcache ? *cenv : *tmp;
-            if (envck > 0) ck_build_right(env);
+            if ((envcache || ck_retain) && !cenv) cenv = std::make_unique<Environment>(N);
+            if (!envcache && !ck_retain) tmp = std::make_unique<Environment>(N);
+            Environment& env = (envcache || ck_retain) ? *cenv : *tmp;
+            if (envck > 0) { if (!ck_retain || !ck_have_R) ck_build_right(env); }
             else if (!envcache || !cache_R) env.build_right(psi, H);
             env.L[0] = Tensor({1,1,1}); env.L[0].from_host({1.0});
             if (!wk.production_mode) { CUDA_CHECK(cudaDeviceSynchronize()); env_s += secs(te, clk::now()); }
@@ -700,15 +708,17 @@ int main(int argc, char** argv)
                 prof(env);
                 env.update_left_site(psi, H, site);
                 env.R[site + 2] = Tensor();                            // never read again this pass
-                if (!envcache) env.L[site] = Tensor();                // halves peak env memory
+                if (ck_retain) { if (!ck_keep(site)) env.L[site] = Tensor(); }   // keep checkpoints for R->L
+                else if (!envcache) env.L[site] = Tensor();          // halves peak env memory
             }
+            if (ck_retain) env.L[N - 1] = Tensor();                   // not read by the R->L pass
         }
         {
             auto te = clk::now();
             std::unique_ptr<Environment> tmp;
-            if (!envcache) tmp = std::make_unique<Environment>(N);
-            Environment& env = envcache ? *cenv : *tmp;
-            if (envck > 0) ck_build_left(env);
+            if (!envcache && !ck_retain) tmp = std::make_unique<Environment>(N);
+            Environment& env = (envcache || ck_retain) ? *cenv : *tmp;
+            if (envck > 0) { if (!ck_retain) ck_build_left(env); }
             else if (!envcache) env.build_left(psi, H);
             env.R[N] = Tensor({1,1,1}); env.R[N].from_host({1.0});
             if (!wk.production_mode) { CUDA_CHECK(cudaDeviceSynchronize()); env_s += secs(te, clk::now()); }
@@ -720,9 +730,12 @@ int main(int argc, char** argv)
                 prof(env);
                 env.update_right_site(psi, H, site + 1);
                 env.L[site] = Tensor();                                // never read again this pass
-                if (!envcache) env.R[site + 2] = Tensor();
+                if (ck_retain) { if (!ck_keep(site + 2)) env.R[site + 2] = Tensor(); }   // keep for next L->R
+                else if (!envcache) env.R[site + 2] = Tensor();
             }
+            if (ck_retain) env.R[1] = Tensor();                       // not read by the L->R pass
             cache_R = envcache;
+            ck_have_R = ck_retain;
         }
         CUDA_CHECK(cudaDeviceSynchronize());
         last_sweep_s = secs(t0, clk::now());
@@ -753,7 +766,7 @@ int main(int argc, char** argv)
                     const double Et = compute_total_energy(trial, H) / compute_norm(trial);
                     if (Et < Eb - 1e-13) { Eb = Et; bb = b; bestA = std::move(trial.A); trial.A.resize(N); }
                 }
-                if (bb > 0) { psi.A = std::move(bestA); right_canonicalize(psi, la); E = Eb; cache_R = false; }
+                if (bb > 0) { psi.A = std::move(bestA); right_canonicalize(psi, la); E = Eb; cache_R = false; ck_have_R = false; }
                 std::cerr << std::setprecision(14) << "ACCEL sweep=" << sw + 1 << " E0=" << E0 << " best_b=" << bb
                           << " E=" << Eb << " gain=" << E0 - Eb << "\n";
             }

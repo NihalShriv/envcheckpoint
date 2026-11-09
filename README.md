@@ -38,8 +38,9 @@ The standalone GPU DMRG code behind the paper's GPU results, with build instruct
 in [`cuda/`](cuda/README.md). Raw outputs of every benchmark and the figure script are in [`results/`](results/README.md).
 
 ## Upstream
-- TeNPy: [tenpy/tenpy#713](https://github.com/tenpy/tenpy/pull/713) (option `env_checkpoint_every`)
-- ITensorMPS.jl: [ITensor/ITensorMPS.jl#228](https://github.com/ITensor/ITensorMPS.jl/pull/228) (`CheckpointedProjMPO`)
+- TeNPy: merged in [tenpy/tenpy#713](https://github.com/tenpy/tenpy/pull/713): DMRG option `env_checkpoint_every`
+  in TeNPy's `main` branch (next release); `python/tenpy` and `patches/` are for earlier versions
+- ITensorMPS.jl: under review in [ITensor/ITensorMPS.jl#228](https://github.com/ITensor/ITensorMPS.jl/pull/228) (`CheckpointedProjMPO`)
 
 ## Options
 - `k`: checkpoint spacing (default round(√N)).

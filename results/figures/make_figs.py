@@ -24,7 +24,7 @@ from matplotlib.ticker import FixedLocator, ScalarFormatter, NullLocator
 ax.yaxis.set_major_locator(FixedLocator([3, 5, 10, 20, 40, 60])); ax.yaxis.set_minor_locator(NullLocator()); ax.yaxis.set_major_formatter(ScalarFormatter())
 ax.xaxis.set_major_formatter(ScalarFormatter())
 ax.set_xlabel("checkpoint spacing $k$"); ax.set_ylabel("environment memory (GB)")
-ax.legend(frameon=False); ax.set_title("dashed: Eq. (2); vertical: $k=\\sqrt{N}$", fontsize=7)
+ax.legend(frameon=False); ax.set_title("dashed: Eq. (1); vertical: $k=\\sqrt{N}$", fontsize=7)
 fig.savefig("fig1_k.pdf")
 
 # Fig 2: peak GPU memory breakdown, triangular XC6 (job 418486)
