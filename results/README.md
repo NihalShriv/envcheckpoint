@@ -21,6 +21,7 @@ usually a `.csv` (one row per sweep), and for the GPU code a `.timing` file. Fil
 | `bisect` (H100), `bisect200` (H200), `h100reach`, `h100edge*`, `xc8big`, `main`, `feas` | Table IV | reach searches: largest D completing two sweeps |
 | `robust` | Table IV (capped rows), Table V | H200 capped to 24/40/48 GB (checkpointed: `robust.sh`; stored: `robust_st.sh`, `r48s.sh` random start, the `c*s` stored runs of `robust.sh` failed at their first D with a cuTENSOR error and were rerun); ITensorMPS.jl TDVP, H16 and MPSKit.jl runs of job 420808 |
 | `bisect200_like` | Table IV check | H200, `bis_h200_like.sh`: stored with `heff_chunks=8` (t0c: 1792 pass, 1920 fail) and one-level k=12 without chunking (t1: 2944 pass, 3072 fail) |
+| `common1536` | sweep times at D=1536 | H200, v8 with caching, `common1536.sh` (job 445428): stored, stored with 8 chunks, k=12 retained, two-level k=36/k2=6 with 8 chunks retained; three sweeps, identical energies |
 | `stab` | correctness | 20-sweep stored vs checkpointed comparison |
 | `conv`, `flagship`, `trilad` | Fig. 5 | converged ladders, square YC8 and triangular XC6 up to D=3072 |
 

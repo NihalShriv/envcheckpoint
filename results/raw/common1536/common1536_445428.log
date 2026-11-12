@@ -1,0 +1,27 @@
+NVIDIA H200 NVL
+start=Thu Nov 12 20:24:58 IST 2026
+--- c1536_stored: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=warm warm_iters=1 dav_maxmv=2 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt sched=1536:3 envck=0 envcache=1 memprof=1 20:24:58
+  sw,D,E,t,peakGB: 1,1536,-73.1726234247,49.557136322,113.033150464
+  sw,D,E,t,peakGB: 2,1536,-73.1727685275,42.555415736,111.98038016
+  sw,D,E,t,peakGB: 3,1536,-73.172859536,42.610563447,111.913271296
+final: davidson_E=-73.172859535989 <psi|H|psi>/<psi|psi>=-73.17285953599 norm=1
+--- c1536_stored_c8: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=warm warm_iters=1 dav_maxmv=2 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt sched=1536:3 envck=0 envcache=1 heff_chunks=8 memprof=1 20:27:33
+  sw,D,E,t,peakGB: 1,1536,-73.1726234247,57.247170514,108.104843264
+  sw,D,E,t,peakGB: 2,1536,-73.1727685275,53.702238243,106.997547008
+  sw,D,E,t,peakGB: 3,1536,-73.172859536,53.779708095,106.930438144
+final: davidson_E=-73.172859535988 <psi|H|psi>/<psi|psi>=-73.172859535989 norm=0.99999999999999
+--- c1536_k12: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=warm warm_iters=1 dav_maxmv=2 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt sched=1536:3 envck=12 ck_retain=1 memprof=1 20:30:32
+  sw,D,E,t,peakGB: 1,1536,-73.1726234247,52.753412008,39.079182336
+  sw,D,E,t,peakGB: 2,1536,-73.1727685275,49.091250699,39.133708288
+  sw,D,E,t,peakGB: 3,1536,-73.172859536,48.88537907,39.066599424
+final: davidson_E=-73.172859535989 <psi|H|psi>/<psi|psi>=-73.17285953599 norm=1
+--- c1536_2lvl_c8: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=warm warm_iters=1 dav_maxmv=2 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt sched=1536:3 envck=36 envck2=6 heff_chunks=8 ck_retain=1 memprof=1 20:33:17
+  sw,D,E,t,peakGB: 1,1536,-73.1726234247,75.715033633,25.539969024
+  sw,D,E,t,peakGB: 2,1536,-73.1727685275,76.252899516,25.460277248
+  sw,D,E,t,peakGB: 3,1536,-73.172859536,76.325635099,25.359613952
+final: davidson_E=-73.172859535988 <psi|H|psi>/<psi|psi>=-73.172859535989 norm=0.99999999999999
+PASS c1536_stored MEMPROF sweep=3 peak_gb=111.913 mps_gb=4.67805 env_gb=88.799 other_gb=18.4362
+PASS c1536_stored_c8 MEMPROF sweep=3 peak_gb=106.93 mps_gb=4.67805 env_gb=88.799 other_gb=13.4534
+PASS c1536_k12 MEMPROF sweep=3 peak_gb=39.0666 mps_gb=4.67805 env_gb=15.779 other_gb=18.6096
+PASS c1536_2lvl_c8 MEMPROF sweep=3 peak_gb=25.3596 mps_gb=4.67805 env_gb=7.17226 other_gb=13.5093
+end=Thu Nov 12 20:37:20 IST 2026
