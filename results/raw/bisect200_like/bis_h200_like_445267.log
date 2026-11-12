@@ -1,0 +1,20 @@
+NVIDIA H200 NVL
+start=Thu Nov 12 11:54:34 IST 2026
+--- t0c_1792: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=warm warm_iters=1 dav_maxmv=2 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt sched=1792:2 envck=0 heff_chunks=8 memprof=1 11:54:34
+  sw,D,E,t,peakGB: 1,1792,-73.1747670837,87.413758781,142.636548096
+  sw,D,E,t,peakGB: 2,1792,-73.1749662627,91.530219427,143.96194816
+final: davidson_E=-73.174966262711 <psi|H|psi>/<psi|psi>=-73.174966262713 norm=1
+PASS t0c D=1792 MEMPROF sweep=2 peak_gb=143.962 mps_gb=6.34948 env_gb=120.615 other_gb=16.9976
+--- t0c_1920: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=warm warm_iters=1 dav_maxmv=2 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt sched=1920:2 envck=0 heff_chunks=8 memprof=1 11:57:55
+RUN FAILED t0c_1920:   what():  cuTENSOR error at src/ct_contract.cu:72 for cutensorContract(handle(), it->second.plan, &one, A, B, &zero, D, D, workspace(it->second.ws), it->second.ws, 0): CUTENSOR_STATUS_INVALID_VALUE
+FAIL t0c D=1920
+--- t1_2944: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=warm warm_iters=1 dav_maxmv=2 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt sched=2944:2 envck=12 memprof=1 11:58:50
+  sw,D,E,t,peakGB: 1,2944,-73.178421971,252.05702676,109.42185472
+  sw,D,E,t,peakGB: 2,2944,-73.1788295442,382.742173662,136.200388608
+final: davidson_E=-73.178829544169 <psi|H|psi>/<psi|psi>=-73.178829544174 norm=0.99999999999999
+PASS t1 D=2944 MEMPROF sweep=2 peak_gb=136.2 mps_gb=16.9233 env_gb=56.5054 other_gb=62.7717
+--- t1_3072: model=tric Lx=24 Ly=6 J2=0.12 seed=1 thresh=0 heff=cutensor compress=1 production=1 memtrack=1 svd=warm warm_iters=1 dav_maxmv=2 dav_fast=1 init_from=$HOME/DMRG_v6/own_experimental/results/tri2/d1280_ours_x.ckpt sched=3072:2 envck=12 memprof=1 12:10:55
+RUN FAILED t1_3072:   what():  cuTENSOR error at src/ct_contract.cu:72 for cutensorContract(handle(), it->second.plan, &one, A, B, &zero, D, D, workspace(it->second.ws), it->second.ws, 0): CUTENSOR_STATUS_INVALID_VALUE
+  sw,D,E,t,peakGB: 1,3072,-73.1785705175,260.343164205,112.972333056
+FAIL t1 D=3072
+end=Thu Nov 12 12:19:53 IST 2026
