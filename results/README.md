@@ -19,7 +19,7 @@ usually a `.csv` (one row per sweep), and for the GPU code a `.timing` file. Fil
 | `mem`, `fastdisk` | Table III | file-based offload (RAM disk, local disk, parallel file system), synchronous and asynchronous |
 | `chunk` | working memory | chunked effective Hamiltonian |
 | `bisect` (H100), `bisect200` (H200), `h100reach`, `h100edge*`, `xc8big`, `main`, `feas` | Table IV | reach searches: largest D completing two sweeps |
-| `robust` | Table IV (capped rows), Table V | H200 capped to 24/40/48 GB; ITensorMPS.jl TDVP, H16 and MPSKit.jl runs of job 420808 |
+| `robust` | Table IV (capped rows), Table V | H200 capped to 24/40/48 GB (checkpointed: `robust.sh`; stored: `robust_st.sh`, `r48s.sh` random start, the `c*s` runs of `robust.sh` that load the D=1280 state fail on the capped card); ITensorMPS.jl TDVP, H16 and MPSKit.jl runs of job 420808 |
 | `stab` | correctness | 20-sweep stored vs checkpointed comparison |
 | `conv`, `flagship`, `trilad` | Fig. 5 | converged ladders, square YC8 and triangular XC6 up to D=3072 |
 
